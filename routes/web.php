@@ -15,19 +15,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'MainController@index')->name('main');
 
-Route::get('products', 'ProductController@index')->name('products.index');
+Route::resource('products', 'ProductController');// se puede tener el uso de only o except para indica que rutas queremos
 
-Route::get('products/create', 'ProductController@create')->name('products.create');
+//Route::get('products', 'ProductController@index')->name('products.index');
 
-Route::post('products/create', 'ProductController@store')->name('products.store');
+//Route::get('products/create', 'ProductController@create')->name('products.create');
 
-Route::get('products/{product}', 'ProductController@show')->name('products.show');
+//Route::post('products/create', 'ProductController@store')->name('products.store');
 
-Route::get('products/{product}/edit', 'ProductController@edit')->name('products.edit');
+//Route::get('products/{product}', 'ProductController@show')->name('products.show');
+// Route::get('products/{product:title}', 'ProductController@show')->name('products.show') busca por medio del titulo y no del id
 
-Route::match(['put' , 'patch'], 'products/{product}', 'ProductController@update')->name('products.update');
+//Route::get('products/{product}/edit', 'ProductController@edit')->name('products.edit');
 
-Route::delete('products/{product}', 'ProductController@destroy')->name('products.destroy');
+//Route::match(['put' , 'patch'], 'products/{product}', 'ProductController@update')->name('products.update');
+
+//Route::delete('products/{product}', 'ProductController@destroy')->name('products.destroy');
 
 Auth::routes();
 

@@ -38,6 +38,9 @@
                         <a class="btn btn-link" href="{{ route('products.show', ['product' => $product->id]) }}">
                             <i class="far fa-eye"></i>
                         </a>
+                        {{-- <a class="btn btn-link" href="{{ route('products.show', ['product' => $product->title]) }}">
+                            <i class="far fa-eye"></i>
+                        </a>--}}
                         <a class="btn btn-link" href="{{ route('products.edit', ['product' => $product->id]) }}">
                             <i class="far fa-edit"></i>
                         </a>
