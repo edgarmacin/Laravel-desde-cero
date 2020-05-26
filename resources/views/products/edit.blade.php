@@ -13,7 +13,7 @@
         </div>
         <div class="form-row">
             <label>Description</label>
-            <input class="form-control" type="text" name="description" value="{{ old('description') ?? $product->description }}" required>
+            <textarea class="form-control" type="text" name="description" required>{{ old('description') ?? $product->description }}</textarea>
         </div>
         <div class="form-row">
             <label>Price</label>

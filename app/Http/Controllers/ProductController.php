@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductRequest;
 use App\Product;
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 //use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
@@ -104,7 +104,7 @@ class ProductController extends Controller
         
         //$product = Product::findOrFail($product);
 
-        $product->update($request->all());
+        $product->update($request->validated());
 
         return redirect()
             ->route('products.index')

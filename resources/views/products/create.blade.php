@@ -8,11 +8,11 @@
         @csrf
         <div class="form-row">
             <label>Title</label>
-            <input class="form-control" type="text" name="title" value="{{ old('title') }}" required>
+            <input class="form-control" type="text" name="title" value="{{ old('title') }}" >
         </div>
         <div class="form-row">
             <label>Description</label>
-            <input class="form-control" type="text" name="description" value="{{ old('description') }}" required>
+            <textarea class="form-control" type="text" name="description" required>{{ old('description') }}</textarea>
         </div>
         <div class="form-row">
             <label>Price</label>
