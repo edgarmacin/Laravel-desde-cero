@@ -17,6 +17,8 @@ Route::get('/', 'MainController@index')->name('main');
 
 Route::resource('products', 'ProductController');// se puede tener el uso de only o except para indica que rutas queremos
 
+Route::resource('products.carts', 'ProductCartController')->only(['store', 'destroy']);
+
 //Route::get('products', 'ProductController@index')->name('products.index');
 
 //Route::get('products/create', 'ProductController@create')->name('products.create');
