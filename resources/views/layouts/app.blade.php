@@ -35,12 +35,20 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('products.index') }}">Products</a>
+                            <a class="nav-link" href="{{ route('products.index') }}">
+                                Products
+                            </a>
                         </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('carts.index') }}">
+                                @inject('cartService', 'App\Services\CartService')
+                                <i class="fas fa-shopping-cart"></i>({{ $cartService->countProducts() }})
+                            </a>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">

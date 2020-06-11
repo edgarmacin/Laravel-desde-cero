@@ -19,6 +19,12 @@ Route::resource('products', 'ProductController');// se puede tener el uso de onl
 
 Route::resource('products.carts', 'ProductCartController')->only(['store', 'destroy']);
 
+Route::resource('carts', 'CartController')->only(['index']);
+
+Route::resource('orders', 'OrderController')->only(['create', 'store']);
+
+Route::resource('orders.payments', 'OrderPaymentController')->only(['create', 'store']);
+
 //Route::get('products', 'ProductController@index')->name('products.index');
 
 //Route::get('products/create', 'ProductController@create')->name('products.create');
